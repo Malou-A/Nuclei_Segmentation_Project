@@ -46,8 +46,6 @@ Some modifications had to be done due to outdated versions of python packages, a
 
 This README will give instructions of how to recreate the experiments I've made.
 
-All scripts and textfiles are provided in this README, but can also be downloaded from www.github.com/Malou-A/Nuclei_Segmentation 
-
 ## 1.1 Setup
 
 ### Folder setup
