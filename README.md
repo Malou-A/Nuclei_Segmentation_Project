@@ -89,9 +89,14 @@ Folder structure:
             - 3_training.txt
             - 4_training.txt
             - 5_training.txt
+            - 5_training_500.txt
             - 6_training.txt
             - 7_training.txt
             - 8_training.txt
+            - 10_training.txt
+            - 11_training.txt
+            - 12_training.txt
+            - 13_training.txt
             - TEST.txt
             - VALIDATION.txt
         - **utils**
