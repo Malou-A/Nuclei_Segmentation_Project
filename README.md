@@ -35,14 +35,11 @@
 
 # 1 Nuclei Segmentation
 
-
-
 I have with help from the script by Broad Bioimage Benchmarc Collection (BBBC), found at https://github.com/carpenterlab/unet4nuclei, recreated their experiment with the use of images from Aits lab, and additional images from other open source datasets.
 
-In the BBBC repository, the full script can be found for their experiments, but for our purpose the script has been modified.
+In the BBBC repository, the full script can be found for their experiments, but for our purpose the script has been modified. 
 
-Some modifications had to be done due to outdated versions of python packages, and some modifications because of different image-formats. In our experiment it was also of importance to include micronucleis in the modelprediction, so the scripts are modified to fit that purpose.
-
+Some modifications had to be done due to outdated versions of python packages, and some modifications because of different image-formats.
 
 This README will give instructions of how to recreate the experiments I've made.
 
