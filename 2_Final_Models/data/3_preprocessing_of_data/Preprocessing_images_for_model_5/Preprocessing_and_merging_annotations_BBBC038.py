@@ -9,7 +9,8 @@ from skimage.util import img_as_ubyte
 from skimage.color import rgb2lab
 from tqdm import tqdm
 
-
+config_vars = {}
+config_vars["home_folder"] = "C:/"
 filepath = config_vars["home_folder"] + '/3_data/2_additional_datasets/2_BBBC_image_sets/kaggle-dsbowl-2018-dataset-fixes-master/stage1_train/'
 filelist = os.listdir(filepath)
 image_storage = config_vars["home_folder"] + '/3_data/2_additional_datasets/2_BBBC_image_sets/BBBC038_normalized_images/'
@@ -19,13 +20,6 @@ os.makedirs(image_storage, exist_ok= True)
 os.makedirs(annotation_storage, exist_ok = True)
 
 def create_boundary_label(im):
-
-    if len(im.shape)>2:
-        if im.shape[2]!=3:
-            annot = annot[:,:,0]
-        else:
-            im = rgb2lab(annot)
-            im = annot[:,:,0]
     # label the annotations nicely to prepare for future filtering operation
 
     im = skimage.morphology.label(im)
