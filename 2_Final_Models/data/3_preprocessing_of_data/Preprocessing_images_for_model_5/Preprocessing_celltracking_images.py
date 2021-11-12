@@ -1,14 +1,7 @@
 #!/usr/bin/env python
-import glob
 import os
-import shutil
-import zipfile
-import requests
-import random
-import matplotlib.pyplot as plt
 import numpy as np
-import pathlib
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 import skimage.io
 import skimage.segmentation
 from skimage.util import img_as_ubyte
@@ -17,6 +10,11 @@ from skimage.color import rgb2lab
 pathways_raw = ['Fluo-N2DL-HeLa/01/','Fluo-N2DL-HeLa/02/','Fluo-N2DH-SIM+/01/','Fluo-N2DH-SIM+/02/','Fluo-N2DH-GOWT1/01/','Fluo-N2DH-GOWT1/02/']
 pathways_annot =['Fluo-N2DL-HeLa/01_ST/SEG/','Fluo-N2DL-HeLa/02_ST/SEG/','Fluo-N2DH-SIM+/01_GT/SEG/','Fluo-N2DH-SIM+/02_GT/SEG/','Fluo-N2DH-GOWT1/01_ST/SEG/','Fluo-N2DH-GOWT1/02_ST/SEG/']
 
+pathways_raw = ['Fluo-N2DL-HeLa/01/','Fluo-N2DL-HeLa/02/','Fluo-N2DH-SIM+/01/','Fluo-N2DH-SIM+/02/','Fluo-N2DH-GOWT1/01/','Fluo-N2DH-GOWT1/02/']
+pathways_annot =['Fluo-N2DL-HeLa/01_ST/SEG/','Fluo-N2DL-HeLa/02_ST/SEG/','Fluo-N2DH-SIM+/01_GT/SEG/','Fluo-N2DH-SIM+/02_GT/SEG/','Fluo-N2DH-GOWT1/01_ST/SEG/','Fluo-N2DH-GOWT1/02_ST/SEG/']
+
+config_vars = {}
+config_vars["home_folder"] = "C:/"
 norm_images = config_vars["home_folder"] + '/3_data/2_additional_datasets/1_celltracking_challenge_data/normalized_images/'
 boundary_labels = config_vars["home_folder"] + '/3_data/2_additional_datasets/1_celltracking_challenge_data/boundary_labels/'
 
